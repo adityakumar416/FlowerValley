@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-
-
-
 <androidx.cardview.widget.CardView
-    android:layout_width="160dp"
-    android:layout_height="210dp"
+    android:layout_width="150dp"
+    android:layout_height="200dp"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_marginStart="12dp"
     android:layout_marginRight="12dp"
@@ -13,7 +10,7 @@
 
 
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:cardCornerRadius="20dp">
+    app:cardCornerRadius="10dp">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -23,19 +20,29 @@
             android:id="@+id/flower_image"
             android:layout_width="160dp"
             android:layout_height="120dp"
-            android:layout_marginTop="7dp"
             android:layout_marginLeft="15dp"
+            android:layout_marginTop="7dp"
             android:layout_marginRight="15dp"
             android:scaleType="centerInside"
             android:src="@drawable/logo_img" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:id="@+id/single_line"
+            android:layout_below="@id/flower_image"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="10dp"
+
+            android:background="@color/black" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/flower_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/flower_image"
+            android:layout_below="@id/single_line"
             android:layout_marginLeft="10dp"
-            android:layout_marginTop="5dp"
+
             android:text="Angle"
             android:textSize="20dp" />
 
@@ -52,10 +59,10 @@
         <androidx.appcompat.widget.AppCompatImageView
             android:layout_width="45dp"
             android:layout_height="45dp"
-            android:layout_below="@id/flower_image"
-            android:layout_marginLeft="40dp"
-            android:layout_marginTop="12dp"
-            android:layout_toRightOf="@id/flower_name"
+            android:layout_below="@id/single_line"
+
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="95dp"
             android:background="@drawable/login_edit_button"
             android:src="@drawable/ic_baseline_add_24" />
 

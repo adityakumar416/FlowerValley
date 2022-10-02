@@ -44,6 +44,8 @@ public class HomeFragment extends Fragment {
     private DatabaseReference mDatabaseRef;
     private Banner banner;
     private FlowerRecyclerModel flower;
+    private FirebaseDatabase firebaseDatabase;
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -54,7 +56,9 @@ public class HomeFragment extends Fragment {
 
         preferenceManager = new SharedPreferenceManager(getContext());
         ArrayList<SlideModel> slideModels=new ArrayList<>();
-        mDatabaseRef = FirebaseDatabase.getInstance().getReference("banners");
+        firebaseDatabase = FirebaseDatabase.getInstance();
+        mDatabaseRef = firebaseDatabase.getReference("banners");
+
         imageSlider=view.findViewById(R.id.image_slider);
         imageSlider.setImageList(slideModels);
 
@@ -78,17 +82,16 @@ public class HomeFragment extends Fragment {
         recyclerView=view.findViewById(R.id.flower_recycler_view);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext(),RecyclerView.HORIZONTAL,false));
         arrFlower=new ArrayList<>();
-        mDatabaseRef = FirebaseDatabase.getInstance().getReference("flowers");
 
         recyclerView.setAdapter(new RecyclerViewAdapter(getContext(), arrFlower));
-        mDatabaseRef.addValueEventListener(new ValueEventListener() {
+        firebaseDatabase.getReference("flowers").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 arrFlower.clear();
                 for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
                     flower = postSnapshot.getValue(FlowerRecyclerModel.class);
                     Log.i(TAG, "onCreateView: Data > " + postSnapshot.getValue());
-                    arrFlower.add(new FlowerRecyclerModel(flower.getFlowerPrice(),""+flower.getFlowerImageUrl(),""+flower.getFlowerName()));
+                    arrFlower.add(flower);
                 }
                 recyclerView.setAdapter(new RecyclerViewAdapter(getContext(), arrFlower));
 

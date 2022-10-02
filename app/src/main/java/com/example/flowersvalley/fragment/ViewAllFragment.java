@@ -4,6 +4,7 @@ import static android.content.ContentValues.TAG;
 
 import android.os.Bundle;
 
+import androidx.appcompat.widget.AppCompatImageView;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -15,6 +16,7 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.example.flowersvalley.R;
+import com.example.flowersvalley.Utils;
 import com.example.flowersvalley.adapter.RecyclerViewAdapter;
 import com.example.flowersvalley.adapter.ViewAllFlowerAdapter;
 import com.example.flowersvalley.model.FlowerRecyclerModel;
@@ -32,6 +34,7 @@ public class ViewAllFragment extends Fragment {
     private  RecyclerView recyclerView;
     private ArrayList<FlowerRecyclerModel> arrFlower;
     private DatabaseReference mDatabaseRef;
+    AppCompatImageView back_icon;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,7 +49,13 @@ public class ViewAllFragment extends Fragment {
         // Inflate the layout for this fragment
         View view=inflater.inflate(R.layout.fragment_view_all, container, false);
         mDatabaseRef = FirebaseDatabase.getInstance().getReference("flowers");
-
+        back_icon=view.findViewById(R.id.back_icon);
+        back_icon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Utils.replaceFragment(new HomeFragment(),getActivity());
+            }
+        });
         recyclerView=view.findViewById(R.id.flower_recyclerview);
         recyclerView.setLayoutManager(new GridLayoutManager(getContext(), 2));
         arrFlower=new ArrayList<>();
@@ -57,8 +66,7 @@ public class ViewAllFragment extends Fragment {
                 for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
                     flower = postSnapshot.getValue(FlowerRecyclerModel.class);
                     Log.i(TAG, "onCreateView: Data > " + postSnapshot.getValue());
-                    arrFlower.add(new FlowerRecyclerModel(flower.getFlowerPrice(),""+flower.getFlowerImageUrl(),""+flower.getFlowerName()));
-                }
+                    arrFlower.add(flower);                }
                 recyclerView.setAdapter(new RecyclerViewAdapter(getContext(), arrFlower));
 
             }

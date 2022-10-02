@@ -9,6 +9,7 @@ public class SharedPreferenceManager {
     public static final String NAME = "NAME";
     public static final String EMAIL = "EMAIL";
     public static final String PHONE = "PHONE";
+    public static final String ITEM_COUNTER = "ITEM_COUNTER";
 
     private final SharedPreferences  sharedPreferences;
 
@@ -18,6 +19,13 @@ public class SharedPreferenceManager {
 
     public void setName(String name) {
         getPreferencesEditor().putString(NAME, name).commit();
+    }
+    public void setItemCounter(int counter) {
+        getPreferencesEditor().putInt(ITEM_COUNTER, counter).commit();
+    }
+
+    public int getItemCounter() {
+        return sharedPreferences.getInt(ITEM_COUNTER, 0);
     }
 
     public String getName() {

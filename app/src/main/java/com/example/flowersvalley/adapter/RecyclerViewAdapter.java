@@ -72,6 +72,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             @Override
             public void onClick(View view) {
 
+
                 sharedPreferenceManager.setItemCounter(count++);
                 BottomMenuHelper.showBadge(context, MainActivity.bottomNavigationView, R.id.cart_icon, "" + sharedPreferenceManager.getItemCounter());
 
@@ -86,16 +87,9 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                 Bundle bundle = new Bundle();
                 bundle.putString("flower_id", flowerRecyclerModel.getFlowerId());
                 bundle.putString("flower_name",flowerRecyclerModel.getFlowerName());
-                flowerRecyclerModel.setFlowerName("");
                 bundle.putString("flower_price",flowerRecyclerModel.getFlowerPrice());
-                flowerRecyclerModel.setFlowerPrice("");
-
                 bundle.putString("flower_about",flowerRecyclerModel.getFlowerDescription());
-                flowerRecyclerModel.setFlowerDescription("");
-
                 bundle.putString("flower_image",flowerRecyclerModel.getFlowerImageUrl());
-                flowerRecyclerModel.setFlowerImageUrl("");
-
                 fragment.setArguments(bundle);
                 Utils.replaceFragment(fragment, (FragmentActivity) context);
             }

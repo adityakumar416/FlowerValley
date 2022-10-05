@@ -8,22 +8,42 @@
     tools:context=".fragment.HomeFragment">
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/flower_vally_home_fragment"
+        android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="105dp"
         android:layout_marginTop="20dp"
         android:text="Flower Valley"
         android:textColor="@color/white"
+        android:visibility="gone"
         android:textSize="25dp" />
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:layout_width="wrap_content"
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/search_bar"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="15dp"
-        android:background="@drawable/ic_baseline_search_24" />
+android:layout_marginTop="16dp"
+    android:layout_marginLeft="12dp"
+    android:layout_marginRight="12dp"
+    android:background="@drawable/edit_simple_box"
+    android:iconifiedByDefault="false"
+    android:layoutDirection="rtl"
+    android:searchIcon="@null"
+    android:theme="@style/ThemeOverlay.SearchView"
+    app:closeIcon="@drawable/ic_baseline_close_24"
+    app:defaultQueryHint="Red Rose"
+    app:searchIcon="@drawable/ic_baseline_search_24" />
+    <ListView
+        android:id="@+id/search_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/search_bar"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:divider="@color/white"
+        android:dividerHeight="2dp"
+        android:visibility="gone" />
 
     <RelativeLayout
         android:layout_width="match_parent"

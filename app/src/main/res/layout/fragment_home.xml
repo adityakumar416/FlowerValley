@@ -23,17 +23,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
-android:layout_marginTop="16dp"
-    android:layout_marginLeft="12dp"
-    android:layout_marginRight="12dp"
-    android:background="@drawable/edit_simple_box"
-    android:iconifiedByDefault="false"
-    android:layoutDirection="rtl"
-    android:searchIcon="@null"
-    android:theme="@style/ThemeOverlay.SearchView"
-    app:closeIcon="@drawable/ic_baseline_close_24"
-    app:defaultQueryHint="Red Rose"
-    app:searchIcon="@drawable/ic_baseline_search_24" />
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="12dp"
+        android:background="@drawable/edit_simple_box"
+        android:iconifiedByDefault="false"
+        android:layoutDirection="rtl"
+        android:searchIcon="@null"
+        android:theme="@style/ThemeOverlay.SearchView"
+        app:closeIcon="@drawable/ic_baseline_close_24"
+        app:defaultQueryHint="Red Rose"
+        app:searchIcon="@drawable/ic_baseline_search_24" />
     <ListView
         android:id="@+id/search_list"
         android:layout_width="match_parent"
@@ -43,7 +43,7 @@ android:layout_marginTop="16dp"
         android:layout_marginRight="12dp"
         android:divider="@color/white"
         android:dividerHeight="2dp"
-        android:visibility="gone" />
+      />
 
     <RelativeLayout
         android:layout_width="match_parent"

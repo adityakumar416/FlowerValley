@@ -20,6 +20,7 @@
         android:layout_below="@id/login_top_image"
         android:layout_marginLeft="80dp"
         android:text="Log in"
+        android:fontFamily="@font/poppins_medium"
         android:textColor="@color/green_700"
         android:textSize="25sp"
         android:textStyle="bold" />
@@ -31,6 +32,7 @@
         android:layout_marginLeft="6dp"
         android:layout_toRightOf="@id/log_in_text"
         android:text="to your account."
+        android:fontFamily="@font/poppins_medium"
         android:textColor="@color/black"
         android:textSize="25sp" />
 
@@ -38,6 +40,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
+        android:fontFamily="@font/poppins_medium"
         android:layout_below="@id/log_in_text"
         android:id="@+id/email_text_box">
 
@@ -46,6 +49,7 @@
             android:id="@+id/country_code"
             android:layout_width="70dp"
             android:layout_height="45dp"
+            android:fontFamily="@font/poppins_medium"
             android:layout_marginLeft="40dp"
             android:layout_marginRight="10dp"
             android:background="@drawable/edit_simple_box"
@@ -56,7 +60,7 @@
             android:textSize="17dp" />
 
         <androidx.appcompat.widget.AppCompatEditText
-
+            android:fontFamily="@font/poppins_medium"
             android:id="@+id/mobile"
             android:layout_width="match_parent"
             android:layout_height="45dp"
@@ -80,6 +84,7 @@
         android:id="@+id/forgot_password"
         android:layout_marginTop="5dp"
         android:gravity="end"
+        android:fontFamily="@font/poppins_medium"
         android:textColor="@color/green_500"
         android:layout_below="@id/email_text_box"
         />
@@ -90,7 +95,7 @@
         android:layout_height="50dp"
         android:layout_below="@id/forgot_password"
         android:layout_marginLeft="50dp"
-
+        android:fontFamily="@font/poppins_medium"
         android:layout_marginTop="25dp"
         android:layout_marginRight="50dp"
         android:background="@drawable/login_edit_button"
@@ -103,6 +108,7 @@
        android:layout_marginTop="40dp"
         android:id="@+id/dont_have_acc"
         android:textSize="18sp"
+        android:fontFamily="@font/poppins_medium"
         android:layout_marginLeft="65dp"
         android:textColor="@color/black"
         android:layout_below="@id/send_otp_btn"
@@ -117,6 +123,7 @@
         android:layout_marginTop="40dp"
         android:layout_toRightOf="@id/dont_have_acc"
         android:text="Sign in"
+        android:fontFamily="@font/poppins_medium"
         android:textColor="@color/green_500"
         android:textSize="18sp"
         android:textStyle="bold" />

@@ -35,13 +35,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Angle"
+                android:fontFamily="@font/poppins_medium"
                 android:textSize="20sp" />
+
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/flower_price"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/flower_name"
                 android:text="340"
+                android:fontFamily="@font/poppins_medium"
                 android:textSize="18sp" />
 
 

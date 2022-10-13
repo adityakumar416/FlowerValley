@@ -56,10 +56,10 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="25dp"
             android:layout_marginTop="30dp"
+            android:fontFamily="@font/poppins_medium"
             android:text="Jannien Flower Bouquet"
             android:textColor="@color/white"
             android:textSize="23sp" />
-
 
 
         <androidx.appcompat.widget.AppCompatTextView
@@ -84,9 +84,9 @@
         <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
             android:layout_marginLeft="25dp"
             android:layout_marginTop="12dp"
+            android:fontFamily="@font/poppins_medium"
             android:text="About"
             android:textColor="@color/white"
             android:textSize="25dp" />
@@ -96,7 +96,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="25dp"
-            android:layout_marginTop="12dp"
+
+            android:fontFamily="@font/poppins_medium"
             android:text="Lorem lpsum is simple dummy text of the printing and typesetting industry. Lorem lpsum has been the industry's standard dummy text ever since the 1500s."
 
             android:textColor="@color/white" />
@@ -110,7 +111,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_marginLeft="20dp"
-                android:layout_marginTop="35dp"
+                android:layout_marginTop="30dp"
                 android:layout_marginRight="20dp"
                 android:background="@drawable/edit_box"
                 android:text="Add to Cart">

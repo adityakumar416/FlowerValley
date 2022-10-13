@@ -42,18 +42,19 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/single_line"
             android:layout_marginLeft="10dp"
-
+            android:fontFamily="@font/poppins_medium"
             android:text="Angle"
             android:textSize="20dp" />
 
         <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/flower_price"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/flower_name"
-            android:id="@+id/flower_price"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="5dp"
             android:text="₹576.00"
+            android:fontFamily="@font/poppins_medium"
             android:textSize="20dp" />
 
         <androidx.appcompat.widget.AppCompatImageView

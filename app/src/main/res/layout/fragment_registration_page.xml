@@ -20,6 +20,7 @@
         android:layout_below="@id/login_top_image"
         android:layout_marginLeft="120dp"
         android:text="Create Account"
+        android:fontFamily="@font/poppins_medium"
         android:textColor="@color/green_700"
         android:textSize="25sp"
         android:textStyle="bold" />
@@ -30,6 +31,7 @@
         android:text="Name"
         android:layout_marginLeft="30dp"
         android:textSize="15sp"
+        android:fontFamily="@font/poppins_medium"
         android:id="@+id/user_name"
         android:layout_marginTop="10dp"
         android:textColor="@color/black"
@@ -44,6 +46,7 @@
         android:layout_marginLeft="30dp"
         android:layout_marginTop="5dp"
         android:layout_marginRight="30dp"
+        android:fontFamily="@font/poppins_medium"
         android:background="@drawable/edit_simple_box"
         android:orientation="horizontal">
 
@@ -58,6 +61,7 @@
             android:id="@+id/et_name"
             android:layout_width="match_parent"
             android:layout_height="45dp"
+            android:fontFamily="@font/poppins_medium"
             android:background="@android:color/transparent"
             android:hint="Name"
             android:paddingLeft="15dp"
@@ -71,6 +75,7 @@
         android:layout_marginLeft="30dp"
         android:textSize="15sp"
         android:id="@+id/email_address"
+        android:fontFamily="@font/poppins_medium"
         android:layout_marginTop="10dp"
         android:textColor="@color/black"
         android:layout_below="@id/user_name_text_box"
@@ -100,6 +105,7 @@
             android:layout_height="45dp"
             android:background="@android:color/transparent"
             android:hint="Email"
+            android:fontFamily="@font/poppins_medium"
             android:paddingLeft="15dp"
             android:singleLine="true" />
 
@@ -112,6 +118,7 @@
         android:text="Mobile"
         android:layout_marginLeft="30dp"
         android:textSize="15sp"
+        android:fontFamily="@font/poppins_medium"
         android:id="@+id/mobile_number"
         android:layout_marginTop="10dp"
         android:textColor="@color/black"
@@ -143,7 +150,7 @@
             android:layout_height="45dp"
             android:background="@android:color/transparent"
             android:hint="Mobile"
-
+            android:fontFamily="@font/poppins_medium"
             android:paddingLeft="15dp"
             android:singleLine="true" />
 
@@ -157,7 +164,7 @@
         android:layout_height="50dp"
         android:layout_below="@id/mobile_number_edit_box"
         android:layout_marginLeft="50dp"
-
+        android:fontFamily="@font/poppins_medium"
         android:layout_marginTop="15dp"
         android:layout_marginRight="50dp"
         android:background="@drawable/login_edit_button"
@@ -169,6 +176,7 @@
         android:text="Already have an account?"
         android:layout_marginTop="10dp"
         android:id="@+id/dont_have_acc"
+        android:fontFamily="@font/poppins_medium"
         android:textSize="18sp"
         android:layout_marginLeft="65dp"
         android:textColor="@color/black"
@@ -184,6 +192,7 @@
         android:layout_marginTop="10dp"
         android:layout_toRightOf="@id/dont_have_acc"
         android:text="Log in"
+        android:fontFamily="@font/poppins_medium"
         android:textColor="@color/green_500"
         android:textSize="18sp"
         android:textStyle="bold" />

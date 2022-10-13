@@ -12,11 +12,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp">
+
         <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-
+            android:fontFamily="@font/poppins_medium"
             android:text="Checkout"
             android:textColor="@color/white"
             android:textSize="22sp" />
@@ -29,6 +30,7 @@
         android:layout_height="match_parent"
         android:layout_below="@+id/app_bar"
         android:layout_marginTop="20dp"
+        android:fontFamily="@font/poppins_medium"
         android:background="@drawable/popular_flower_top_corner"
         android:orientation="vertical">
 
@@ -37,6 +39,7 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:textStyle="bold"
+            android:fontFamily="@font/poppins_medium"
             android:text="Fill the information below"
             android:layout_margin="20dp"
             android:textSize="15sp" />
@@ -53,6 +56,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
+                android:fontFamily="@font/poppins_medium"
                 android:background="@drawable/edit_simple_box"
                 android:layout_marginRight="20dp"
                 android:layout_marginLeft="20dp"
@@ -67,6 +71,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
+                android:fontFamily="@font/poppins_medium"
                 android:background="@drawable/edit_simple_box"
                 android:layout_marginRight="20dp"
                 android:layout_marginLeft="20dp"
@@ -84,6 +89,7 @@
                 android:background="@drawable/edit_simple_box"
                 android:layout_marginRight="20dp"
                 android:layout_marginLeft="20dp"
+                android:fontFamily="@font/poppins_medium"
                 android:hint="Alternate Phone Number"
                 android:paddingLeft="18dp"/>
         </com.google.android.material.textfield.TextInputLayout>
@@ -95,6 +101,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
+                android:fontFamily="@font/poppins_medium"
                 android:background="@drawable/edit_simple_box"
                 android:layout_marginRight="20dp"
                 android:layout_marginLeft="20dp"
@@ -110,6 +117,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
+                android:fontFamily="@font/poppins_medium"
                 android:background="@drawable/edit_simple_box"
                 android:layout_marginRight="20dp"
                 android:layout_marginLeft="20dp"
@@ -125,6 +133,7 @@
                 android:layout_height="50dp"
                 android:background="@drawable/edit_simple_box"
                 android:layout_marginRight="20dp"
+                android:fontFamily="@font/poppins_medium"
                 android:layout_marginLeft="20dp"
                 android:hint="House Number, Building Name"
                 android:paddingLeft="18dp"/>
@@ -139,6 +148,7 @@
                 android:layout_height="50dp"
                 android:background="@drawable/edit_simple_box"
                 android:layout_marginRight="20dp"
+                android:fontFamily="@font/poppins_medium"
                 android:layout_marginLeft="20dp"
                 android:hint="Road Name, Area, Colony"
                 android:paddingLeft="18dp"/>
@@ -150,6 +160,7 @@
             android:layout_below="@id/total_amount"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="25dp"
+            android:fontFamily="@font/poppins_medium"
             android:layout_marginRight="20dp"
             android:background="@drawable/login_edit_button"
             android:text="Go to Payment -->"

@@ -192,7 +192,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="5dp"
-
+            android:fontFamily="@font/poppins_medium"
             android:text="Popular Items"
             android:textSize="20dp" />
 
@@ -206,6 +206,7 @@
             android:layout_marginRight="23dp"
             android:layout_toRightOf="@id/popular_item"
             android:text="View All"
+            android:fontFamily="@font/poppins_medium"
             android:textColor="@color/green_200"
             android:textSize="15dp" />
 
@@ -216,7 +217,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/popular_item"
 
-
+            android:fontFamily="@font/poppins_medium"
             />
 
 

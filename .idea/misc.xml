@@ -37,13 +37,24 @@
         <entry key="..\:/Users/macBook/AndroidStudioProjects/FlowersValley/app/src/main/res/layout/fragment_view_all.xml" value="0.22447916666666667" />
         <entry key="..\:/Users/macBook/AndroidStudioProjects/FlowersValley/app/src/main/res/layout/view_all_flower.xml" value="0.22447916666666667" />
         <entry key="..\:/Users/macBook/AndroidStudioProjects/FlowersValley/app/src/main/res/menu/menu.xml" value="0.22083333333333333" />
+        <entry key="..\:/Users/macBook/Desktop/FlowersValley/app/src/main/res/drawable-v24/ic_baseline_add_24.xml" value="0.113" />
+        <entry key="..\:/Users/macBook/Desktop/FlowersValley/app/src/main/res/drawable/bg_otp.xml" value="0.1375" />
+        <entry key="..\:/Users/macBook/Desktop/FlowersValley/app/src/main/res/drawable/bottom_nev_edit_box.xml" value="0.1375" />
         <entry key="..\:/Users/macBook/Desktop/FlowersValley/app/src/main/res/drawable/cart_bottom_nav_bg.xml" value="0.134" />
+        <entry key="..\:/Users/macBook/Desktop/FlowersValley/app/src/main/res/drawable/cart_edit_bg.xml" value="0.1375" />
+        <entry key="..\:/Users/macBook/Desktop/FlowersValley/app/src/main/res/drawable/dashboard_bg.xml" value="0.1375" />
+        <entry key="..\:/Users/macBook/Desktop/FlowersValley/app/src/main/res/drawable/edit_box.xml" value="0.1375" />
+        <entry key="..\:/Users/macBook/Desktop/FlowersValley/app/src/main/res/drawable/edit_simple_box.xml" value="0.1375" />
+        <entry key="..\:/Users/macBook/Desktop/FlowersValley/app/src/main/res/drawable/home_fragment_edit_page.xml" value="0.1375" />
+        <entry key="..\:/Users/macBook/Desktop/FlowersValley/app/src/main/res/drawable/ic_add.xml" value="0.1375" />
         <entry key="..\:/Users/macBook/Desktop/FlowersValley/app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.134" />
         <entry key="..\:/Users/macBook/Desktop/FlowersValley/app/src/main/res/drawable/login_edit_button.xml" value="0.143" />
+        <entry key="..\:/Users/macBook/Desktop/FlowersValley/app/src/main/res/drawable/search_bg.xml" value="0.1375" />
         <entry key="..\:/Users/macBook/Desktop/FlowersValley/app/src/main/res/layout/activity_splash_screen.xml" value="0.22083333333333333" />
+        <entry key="..\:/Users/macBook/Desktop/FlowersValley/app/src/main/res/layout/cart_recyclerview_layout.xml" value="0.22447916666666667" />
         <entry key="..\:/Users/macBook/Desktop/FlowersValley/app/src/main/res/layout/flower_card_recyclerview.xml" value="0.18193330519206416" />
         <entry key="..\:/Users/macBook/Desktop/FlowersValley/app/src/main/res/layout/flower_recycler_view.xml" value="0.22447916666666667" />
-        <entry key="..\:/Users/macBook/Desktop/FlowersValley/app/src/main/res/layout/fragment_cart.xml" value="0.1875" />
+        <entry key="..\:/Users/macBook/Desktop/FlowersValley/app/src/main/res/layout/fragment_cart.xml" value="0.12299465240641712" />
         <entry key="..\:/Users/macBook/Desktop/FlowersValley/app/src/main/res/layout/fragment_favourite.xml" value="0.22083333333333333" />
         <entry key="..\:/Users/macBook/Desktop/FlowersValley/app/src/main/res/layout/fragment_flower_detail.xml" value="0.22447916666666667" />
         <entry key="..\:/Users/macBook/Desktop/FlowersValley/app/src/main/res/layout/fragment_home.xml" value="0.22447916666666667" />

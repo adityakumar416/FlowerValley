@@ -13,17 +13,7 @@
         android:scaleType="fitXY"
         android:src="@drawable/login_cut_image" />
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/log_in_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/login_top_image"
-        android:layout_marginLeft="120dp"
-        android:text="Create Account"
-        android:fontFamily="@font/poppins_medium"
-        android:textColor="@color/green_700"
-        android:textSize="25sp"
-        android:textStyle="bold" />
+  ````U````
 
     <androidx.appcompat.widget.AppCompatTextView
         android:layout_width="wrap_content"
@@ -46,8 +36,8 @@
         android:layout_marginLeft="30dp"
         android:layout_marginTop="5dp"
         android:layout_marginRight="30dp"
-        android:fontFamily="@font/poppins_medium"
         android:background="@drawable/edit_simple_box"
+        android:fontFamily="@font/poppins_medium"
         android:orientation="horizontal">
 
         <androidx.appcompat.widget.AppCompatTextView
@@ -61,8 +51,8 @@
             android:id="@+id/et_name"
             android:layout_width="match_parent"
             android:layout_height="45dp"
-            android:fontFamily="@font/poppins_medium"
             android:background="@android:color/transparent"
+            android:fontFamily="@font/poppins_medium"
             android:hint="Name"
             android:paddingLeft="15dp"
             android:singleLine="true" />
@@ -104,8 +94,8 @@
             android:layout_width="match_parent"
             android:layout_height="45dp"
             android:background="@android:color/transparent"
-            android:hint="Email"
             android:fontFamily="@font/poppins_medium"
+            android:hint="Email"
             android:paddingLeft="15dp"
             android:singleLine="true" />
 

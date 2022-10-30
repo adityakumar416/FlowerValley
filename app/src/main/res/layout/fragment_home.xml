@@ -11,12 +11,13 @@
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="105dp"
-        android:layout_marginTop="20dp"
-        android:text="Flower Valley"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/poppins_medium"
+        android:text="@string/app_name"
         android:textColor="@color/white"
-        android:visibility="gone"
-        android:textSize="25dp" />
+
+    android:textSize="22sp"
+    android:visibility="gone" />
 
     <androidx.appcompat.widget.SearchView
         android:id="@+id/search_bar"
@@ -24,12 +25,13 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_marginLeft="12dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="12dp"
         android:layout_marginRight="12dp"
-        android:background="@drawable/edit_simple_box"
+        android:background="@drawable/search_bg"
         android:iconifiedByDefault="false"
         android:layoutDirection="rtl"
         android:searchIcon="@null"
+
         android:theme="@style/ThemeOverlay.SearchView"
         app:closeIcon="@drawable/ic_baseline_close_24"
         app:defaultQueryHint="Red Rose"
@@ -42,14 +44,15 @@
         android:layout_marginLeft="12dp"
         android:layout_marginRight="12dp"
         android:divider="@color/white"
+        android:elevation="5dp"
         android:dividerHeight="2dp"
-      />
+        />
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="80sp"
-
+        android:id="@+id/main_layout"
         android:background="@drawable/home_fragment_edit_page">
 
         <com.denzcoskun.imageslider.ImageSlider
@@ -180,7 +183,6 @@
             </androidx.cardview.widget.CardView>
 
 
-
         </GridLayout>
 
 
@@ -205,8 +207,8 @@
             android:layout_marginTop="23dp"
             android:layout_marginRight="23dp"
             android:layout_toRightOf="@id/popular_item"
-            android:text="View All"
             android:fontFamily="@font/poppins_medium"
+            android:text="View All"
             android:textColor="@color/green_200"
             android:textSize="15dp" />
 
@@ -217,11 +219,10 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/popular_item"
 
-            android:fontFamily="@font/poppins_medium"
-            />
+            android:fontFamily="@font/poppins_medium" />
 
 
-            </RelativeLayout>
+    </RelativeLayout>
 
 
 

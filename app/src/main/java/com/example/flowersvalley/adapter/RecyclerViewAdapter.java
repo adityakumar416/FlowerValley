@@ -59,7 +59,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
 
         holder.flower_name.setText(flowerRecyclerModel.getFlowerName());
-        holder.flower_price.setText(flowerRecyclerModel.getFlowerPrice());
+        holder.flower_price.setText("" + flowerRecyclerModel.getFlowerPrice());
 
         Glide.with(context)
                 .load(flowerRecyclerModel.getFlowerImageUrl())
@@ -74,7 +74,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
 
                 sharedPreferenceManager.setItemCounter(count++);
-                BottomMenuHelper.showBadge(context, MainActivity.bottomNavigationView, R.id.cart_icon, "" + sharedPreferenceManager.getItemCounter());
+                Utils.addToCart(context,flowerRecyclerModel.getFlowerId(), flowerRecyclerModel.getFlowerName(), flowerRecyclerModel.getFlowerPrice(), flowerRecyclerModel.getFlowerImageUrl(), sharedPreferenceManager.getPhone());
 
 
             }
@@ -87,7 +87,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                 Bundle bundle = new Bundle();
                 bundle.putString("flower_id", flowerRecyclerModel.getFlowerId());
                 bundle.putString("flower_name",flowerRecyclerModel.getFlowerName());
-                bundle.putString("flower_price",flowerRecyclerModel.getFlowerPrice());
+                bundle.putInt("flower_price",flowerRecyclerModel.getFlowerPrice());
                 bundle.putString("flower_about",flowerRecyclerModel.getFlowerDescription());
                 bundle.putString("flower_image",flowerRecyclerModel.getFlowerImageUrl());
                 fragment.setArguments(bundle);
@@ -99,8 +99,6 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     @Override
     public int getItemCount() {
-
-
 
         return arrFlower.size();
     }

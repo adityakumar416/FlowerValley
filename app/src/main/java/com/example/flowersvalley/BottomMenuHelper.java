@@ -10,7 +10,10 @@ import androidx.appcompat.widget.AppCompatTextView;
 import com.google.android.material.bottomnavigation.BottomNavigationItemView;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+
 public class BottomMenuHelper {
+
+
     public static void showBadge(Context context, BottomNavigationView bottomNavigationView, @IdRes int itemId, String value) {
         removeBadge(bottomNavigationView, itemId);
         BottomNavigationItemView itemView = bottomNavigationView.findViewById(itemId);
@@ -19,6 +22,8 @@ public class BottomMenuHelper {
         AppCompatTextView text = badge.findViewById(R.id.badge_text_view);
         text.setText(value);
         itemView.addView(badge);
+
+
     }
 
     public static void removeBadge(BottomNavigationView bottomNavigationView, @IdRes int itemId) {

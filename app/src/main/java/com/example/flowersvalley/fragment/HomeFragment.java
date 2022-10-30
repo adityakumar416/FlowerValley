@@ -17,6 +17,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.denzcoskun.imageslider.ImageSlider;
@@ -52,6 +53,19 @@ public class HomeFragment extends Fragment {
     private FirebaseDatabase firebaseDatabase;
     private SearchView searchView;
     private ListView searchFlowerList;
+    private RelativeLayout mainLayout;
+
+
+    public HomeFragment() {
+        // Required empty public constructor
+    }
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        if (getArguments() != null) {
+        }
+        MainActivity.bottomNavigationView.setVisibility(View.VISIBLE);
+    }
 
 
     @Override
@@ -59,13 +73,17 @@ public class HomeFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_home, container, false);
-        MainActivity.bottomNavigationView.setVisibility(View.VISIBLE);
+
 
         preferenceManager = new SharedPreferenceManager(getContext());
         ArrayList<SlideModel> slideModels = new ArrayList<>();
         firebaseDatabase = FirebaseDatabase.getInstance();
         mDatabaseRef = firebaseDatabase.getReference("banners");
 
+        view_all = view.findViewById(R.id.view_all);
+        searchView = view.findViewById(R.id.search_bar);
+        searchFlowerList = view.findViewById(R.id.search_list);
+        mainLayout=view.findViewById(R.id.main_layout);
         imageSlider = view.findViewById(R.id.image_slider);
         imageSlider.setImageList(slideModels);
 
@@ -111,15 +129,12 @@ public class HomeFragment extends Fragment {
         });
 
 
-        view_all = view.findViewById(R.id.view_all);
-        searchView = view.findViewById(R.id.search_bar);
-        searchFlowerList = view.findViewById(R.id.search_list);
 
 
         view_all.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                MainActivity.bottomNavigationView.setVisibility(View.GONE);
+
                 Utils.replaceFragment(new ViewAllFragment(), getActivity());
             }
         });
@@ -144,8 +159,11 @@ public class HomeFragment extends Fragment {
             @Override
             public boolean onQueryTextSubmit(String query) {
                 Log.i(TAG, "onQueryTextSubmit: " + query);
-                if (arrFlower.contains(query)) {
+
+                if (arrFlower.contains(query.trim())) {
                     flowerArrayAdapter.getFilter().filter(query);
+
+
                 } else {
                     Toast.makeText(getContext(), "No Match found", Toast.LENGTH_LONG).show();
                 }
@@ -156,6 +174,7 @@ public class HomeFragment extends Fragment {
             public boolean onQueryTextChange(String newText) {
                 Log.i(TAG, "onQueryTextChange: " + newText);
                 searchFlowerList.setVisibility(View.VISIBLE);
+                mainLayout.setVisibility(View.GONE);
                 flowerArrayAdapter.getFilter().filter(newText);
                 return false;
             }
@@ -166,6 +185,7 @@ public class HomeFragment extends Fragment {
             public boolean onClose() {
                 searchView.onActionViewCollapsed();
                 searchFlowerList.setVisibility(View.GONE);
+                mainLayout.setVisibility(View.VISIBLE);
                 return false;
             }
         });

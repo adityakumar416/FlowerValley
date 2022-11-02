@@ -86,7 +86,7 @@ public class HomeFragment extends Fragment {
         mainLayout=view.findViewById(R.id.main_layout);
         imageSlider = view.findViewById(R.id.image_slider);
         imageSlider.setImageList(slideModels);
-
+        arrFlower = new ArrayList<>();
 
         mDatabaseRef.addValueEventListener(new ValueEventListener() {
             @Override
@@ -107,9 +107,8 @@ public class HomeFragment extends Fragment {
 
         recyclerView = view.findViewById(R.id.flower_recycler_view);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext(), RecyclerView.HORIZONTAL, false));
-        arrFlower = new ArrayList<>();
 
-        recyclerView.setAdapter(new RecyclerViewAdapter(getContext(), arrFlower));
+
         firebaseDatabase.getReference("flowers").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
@@ -134,7 +133,7 @@ public class HomeFragment extends Fragment {
         view_all.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                MainActivity.bottomNavigationView.setVisibility(View.GONE);
                 Utils.replaceFragment(new ViewAllFragment(), getActivity());
             }
         });
@@ -146,35 +145,37 @@ public class HomeFragment extends Fragment {
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 //flower = flowers.get(i);
                 Log.i(TAG, "onItemSelected: " + arrFlower.get(i).getFlowerId());
-            }
 
+            }
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
-                Log.e(TAG, "onNothingSelected:");
+                Log.e(TAG, "onNothingSelected:" );
             }
         });
-
+        searchFlowerList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Log.i(TAG, "onItemSelected: " + arrFlower.get(i).getFlowerId());
+            }
+        });
         searchView.setQueryHint("Red Rose");
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
                 Log.i(TAG, "onQueryTextSubmit: " + query);
-
-                if (arrFlower.contains(query.trim())) {
+                if (arrFlower.contains(query)) {
                     flowerArrayAdapter.getFilter().filter(query);
-
-
                 } else {
                     Toast.makeText(getContext(), "No Match found", Toast.LENGTH_LONG).show();
                 }
                 return false;
             }
-
             @Override
             public boolean onQueryTextChange(String newText) {
                 Log.i(TAG, "onQueryTextChange: " + newText);
                 searchFlowerList.setVisibility(View.VISIBLE);
                 mainLayout.setVisibility(View.GONE);
+                MainActivity.bottomNavigationView.setVisibility(View.GONE);
                 flowerArrayAdapter.getFilter().filter(newText);
                 return false;
             }
@@ -185,10 +186,14 @@ public class HomeFragment extends Fragment {
             public boolean onClose() {
                 searchView.onActionViewCollapsed();
                 searchFlowerList.setVisibility(View.GONE);
+                MainActivity.bottomNavigationView.setVisibility(View.VISIBLE);
+
                 mainLayout.setVisibility(View.VISIBLE);
                 return false;
             }
         });
+
+        Utils.getCartItemCount(preferenceManager.getPhone(), getContext());
 
         return view;
     }

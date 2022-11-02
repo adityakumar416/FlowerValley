@@ -35,7 +35,6 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     ArrayList<FlowerRecyclerModel> arrFlower;
     Context context;
     int count = 1;
-    private String flower_name,flower_price,flower_about;
 
 
     public RecyclerViewAdapter(Context context, ArrayList<FlowerRecyclerModel> arrFlower)

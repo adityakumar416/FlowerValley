@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.widget.AppCompatButton;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -16,6 +17,7 @@ import android.view.ViewGroup;
 import com.example.flowersvalley.MainActivity;
 import com.example.flowersvalley.R;
 import com.example.flowersvalley.SharedPreferenceManager;
+import com.example.flowersvalley.Utils;
 import com.example.flowersvalley.adapter.CartAdapter;
 import com.example.flowersvalley.model.CartModel;
 import com.google.firebase.database.DataSnapshot;
@@ -35,6 +37,7 @@ public class CartFragment extends Fragment {
     private FirebaseDatabase firebaseDatabase;
     SharedPreferenceManager sharedPreferenceManager;
     ArrayList<CartModel> cartModels;
+    private AppCompatButton btnCheckOut;
 
 
     public CartFragment() {
@@ -57,6 +60,7 @@ public class CartFragment extends Fragment {
        View view=inflater.inflate(R.layout.fragment_cart, container, false);
 
         cartRecyclerview = view.findViewById(R.id.cart_recyclerview);
+        btnCheckOut = view.findViewById(R.id.check_out);
 
         cartModels = new ArrayList<>();
         sharedPreferenceManager = new SharedPreferenceManager(getContext());
@@ -85,10 +89,15 @@ public class CartFragment extends Fragment {
 
             @Override
             public void onCancelled(DatabaseError databaseError) {
-
+                Log.i(TAG, "onCancelled: " + databaseError.getMessage());
             }
         });
-
+        btnCheckOut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Utils.replaceFragment(new CheckoutFragment(), getActivity());
+            }
+        });
         return view;
     }
 }

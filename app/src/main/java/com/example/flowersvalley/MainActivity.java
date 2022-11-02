@@ -1,7 +1,12 @@
 package com.example.flowersvalley;
 
+import static android.content.ContentValues.TAG;
+
+import android.content.Context;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,6 +21,7 @@ import com.example.flowersvalley.fragment.LoginOtpFragment;
 import com.example.flowersvalley.fragment.ProfileFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.FirebaseApp;
+import com.razorpay.PaymentData;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -79,6 +85,8 @@ public class MainActivity extends AppCompatActivity {
         fragmentTransaction.replace(R.id.frame,fragment);
         fragmentTransaction.commit();
     }
+
+
 
 
 }

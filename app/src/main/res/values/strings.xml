@@ -2,4 +2,14 @@
     <string name="app_name">Flowers Valley</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!--    <string name="key_id">rzp_test_Feo6ev1HECbk7p</string>-->
+    <string name="key_id_ashish_sir">rzp_live_58RJgkUOse8qR8</string>
+    <string name="key_id">rzp_test_g2tP26bxxEXANR</string>
+    <string name="key_secret">qFwyhIe92RgBk4wwizcGcO9T</string>
+    <string name="district">District</string>
+    <string name="city">City</string>
+    <string name="state">State</string>
+    <string name="postal_code">Postal Code</string>
+    <string name="contact_number">Contact Number</string>
+    <string name="add_new_address">Add New Address</string>
 </resources>

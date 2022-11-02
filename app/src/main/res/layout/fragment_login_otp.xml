@@ -18,7 +18,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/login_top_image"
-        android:layout_marginLeft="80dp"
+        android:layout_marginLeft="40dp"
         android:text="Log in"
         android:fontFamily="@font/poppins_medium"
         android:textColor="@color/green_700"
@@ -31,8 +31,8 @@
         android:layout_below="@id/login_top_image"
         android:layout_marginLeft="6dp"
         android:layout_toRightOf="@id/log_in_text"
-        android:text="to your account."
         android:fontFamily="@font/poppins_medium"
+        android:text="to your account"
         android:textColor="@color/black"
         android:textSize="25sp" />
 
@@ -49,14 +49,14 @@
             android:id="@+id/country_code"
             android:layout_width="70dp"
             android:layout_height="45dp"
-            android:fontFamily="@font/poppins_medium"
             android:layout_marginLeft="40dp"
             android:layout_marginRight="10dp"
             android:background="@drawable/edit_simple_box"
+            android:fontFamily="@font/poppins_medium"
             android:gravity="center"
-            android:singleLine="true"
-
             android:hint="+91"
+
+            android:singleLine="true"
             android:textSize="17dp" />
 
         <androidx.appcompat.widget.AppCompatEditText

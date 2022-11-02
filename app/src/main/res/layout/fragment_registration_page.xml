@@ -13,20 +13,18 @@
         android:scaleType="fitXY"
         android:src="@drawable/login_cut_image" />
 
-  ````U````
 
     <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/user_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Name"
+        android:layout_below="@id/login_top_image"
         android:layout_marginLeft="30dp"
-        android:textSize="15sp"
-        android:fontFamily="@font/poppins_medium"
-        android:id="@+id/user_name"
         android:layout_marginTop="10dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Name"
         android:textColor="@color/black"
-        android:layout_below="@id/log_in_text"
-        />
+        android:textSize="15sp" />
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/user_name_text_box"
